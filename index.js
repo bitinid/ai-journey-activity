@@ -19,7 +19,7 @@ app.post('/journeybuilder/execute', async (req, res) => {
   try {
     const inputData = req.body.inArguments?.[0];
 
-    const aiResponse = await axios.post(process.env.AI_ENDPOINT, inputData);
+    const aiResponse = await axios.post(process.env.AI_ENDPOINT1, inputData);
 
     const classifiedData = aiResponse.data;
 
