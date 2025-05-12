@@ -1,0 +1,47 @@
+{
+  "workflowApiVersion": "1.1",
+  "metaData": {
+    "icon": "https://example.com/icon.png",
+    "category": "message"
+  },
+  "type": "REST",
+  "lang": {
+    "en-US": {
+      "name": "AI Classifier",
+      "description": "Classifies input data using an AI API"
+    }
+  },
+  "arguments": {
+    "execute": {
+      "inArguments": [],
+      "outArguments": [],
+      "url": "https://your-deployed-url.com/journeybuilder/execute",
+      "timeout": 10000,
+      "retryCount": 3,
+      "retryDelay": 1000,
+      "concurrentRequests": 5
+    }
+  },
+  "configurationArguments": {
+    "applicationExtensionKey": "your-app-extension-key"
+  },
+  "userInterfaces": {
+    "configModal": {
+      "height": 500,
+      "width": 600,
+      "url": "https://your-deployed-url.com/ui.html"
+    }
+  },
+  "schema": {
+    "arguments": {
+      "execute": {
+        "inArguments": [
+          { "email": "" }
+        ],
+        "outArguments": [
+          { "classifiedData": "" }
+        ]
+      }
+    }
+  }
+}
